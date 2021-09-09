@@ -69,15 +69,15 @@
 
                             
                             <ul class="dropdown-menu">
-                                {% for s in category.sub_category_set.all %}
-                                    <li><a class="dropdown-item" href="#">{{ s.title }}</a></li>
+                                {% for i in category.sub_category_set.all %}
+                                    <li><a class="dropdown-item" href="#">{{ i.title }}</a></li>
                                 {% endfor %}
                             
                             </ul>
                             
                         </li>
                     {% endfor %}
-                       
+                      
                 </ul>
                 
               </li>
