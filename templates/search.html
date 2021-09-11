@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+
+    
+<!-- Courses -->
+<div id="courses" class="Courses">
+  <div class="container-fluid padding_left3">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="box_bg">
+          <div class="box_bg_img">
+            <div class="row">
+            <h4>Search For <span>{{ serch_key }}</span></h4>
+            
+            {% for item in serach_items %} 
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="box_my">
+                  <figure><img src="{{ item.image.url }}"></figure>
+                  <div class="overlay">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.disc }}</p>
+                  </div>
+                </div>
+              </div>
+              
+            {% endfor %}
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Courses -->
+
+
+    
+{% endblock %}
