@@ -50,13 +50,13 @@ def category(request):
     catId = request.GET.get('category')
     print(request.GET)
     if catId:
-        sub = Sub_Category.objects.filter(category=catId)
+        item = Sub_Category.objects.filter(category=catId)
     else:
-        sub = Sub_Category.objects.all()
+        item = Sub_Category.objects.all()
     context = {
         'categories': category,
         'sub': sub,
-        # 'items': item,
+        'items': item,
     }
 
     return render(request, 'index.html', context)
